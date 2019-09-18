@@ -8,12 +8,24 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Login from '~/pages/Login';
 import Main from '~/pages/Main';
 import Perfil from '~/pages/Perfil';
+import Register from './pages/Register';
 
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 
 // Stack de login
-const AuthStack = createStackNavigator({ SignIn: Login });
+const AuthStack = createStackNavigator({ 
+    SignIn: Login,
+    SignUp: {
+        screen: Register,
+        navigationOptions: {
+            title: 'Registre uma conta!',
+            StatusBar: {
+              backgroundColor: 'green'
+            },
+          },
+    }
+ });
 
 // Stack interno
 const AppStack = createBottomTabNavigator(

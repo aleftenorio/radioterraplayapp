@@ -23,7 +23,7 @@ import { View, Image, ImageBackground, StatusBar } from 'react-native';
 class Login extends React.Component {
 
   static navigationOptions = {
-    title: 'Por favor digite o login',
+    title: 'Faça o login!',
     StatusBar: {
       backgroundColor: 'green'
     }
@@ -77,7 +77,7 @@ class Login extends React.Component {
 
               <Text style={{ marginLeft: 10 }} onPress={() => alert("Esquece minha senha!")}> Esqueceu sua senha?</Text>
 
-              <Button light style={{ margin: 15, justifyContent: 'center', marginTop: 50 }}><Text> Criar Nova Conta </Text></Button>
+              <Button onPress={() => { this.props.navigation.navigate('SignUp') }} light style={{ margin: 15, justifyContent: 'center', marginTop: 50 }}><Text> Criar Nova Conta </Text></Button>
             </Form>
 
           </Content>
