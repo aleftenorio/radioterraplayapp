@@ -27,3 +27,9 @@
 		    <string>Zocial.ttf</string>
 	        </array>
         ) | Patch (ios/mbtvapp/Info.plist)
+
+## Buid Android
+
+1º cd android && ./gradlew bundleRelease 
+2º cd project && react-native run-android --variant=release
+3º get apk in android/app/build/outputs/apk/release
